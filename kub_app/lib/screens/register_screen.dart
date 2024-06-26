@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kub_app/screens/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key}) : super(key: key);
@@ -13,7 +14,7 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/kub_Logo_HD-04.png', width: 309, height: 309),
+              Image.asset('assets/images/kub Logo_HD-04.png', width: 309, height: 309),
               const SizedBox(height: 20),
               Text("Inscrivez-vous", style: GoogleFonts.montserrat(color: Colors.black, fontSize: 32, fontWeight: FontWeight.w700 ),),
               const SizedBox(height: 20),
@@ -23,31 +24,43 @@ class RegisterScreen extends StatelessWidget {
                   children: [
                     TextField(
                       decoration: InputDecoration(
+                        
                         labelText: 'Numero de téléphone',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(0),)
+                          
                       ),
                     ),
                     SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Votre nom',
+                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(0),)
                       ),
                     ),
                     SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Votre Prénoms',
+                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(0),)
                       ),
                     ),
                     SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Email',
+                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(0),)
                       ),
                     ),
                     SizedBox(height: 10),
                     TextField(
                       decoration: InputDecoration(
                         labelText: 'Mot de passe',
+                         border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(0),)
                       ),
                       obscureText: true,
                     ),
@@ -61,6 +74,11 @@ class RegisterScreen extends StatelessWidget {
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
+                         Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LoginScreen()),
+                      );
                       },
                       style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
