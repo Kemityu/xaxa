@@ -67,18 +67,18 @@ class RegisterScreen extends StatelessWidget {
                     SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
-                       
+                          Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LoginScreen()),
+                      );
                       },
                       child: Text('Avez-vous déjà un compte ? Se connecter', style: GoogleFonts.montserrat(color: Colors.black, fontSize: 20 , fontWeight: FontWeight.w600),),
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                         Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => LoginScreen()),
-                      );
+                      
                       },
                       style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.black,
