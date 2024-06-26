@@ -15,7 +15,7 @@ class RegisterScreen extends StatelessWidget {
             children: [
               Image.asset('assets/images/kub_Logo_HD-04.png', width: 309, height: 309),
               const SizedBox(height: 20),
-              const Text("Inscrivez-vous"),
+              Text("Inscrivez-vous", style: GoogleFonts.montserrat(color: Colors.black, fontSize: 32, fontWeight: FontWeight.w700 ),),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -54,16 +54,22 @@ class RegisterScreen extends StatelessWidget {
                     SizedBox(height: 20),
                     TextButton(
                       onPressed: () {
-                        // Ajoutez ici la logique pour rediriger vers l'écran de connexion
+                       
                       },
-                      child: Text('Avez-vous déjà un compte ? Se connecter'),
+                      child: Text('Avez-vous déjà un compte ? Se connecter', style: GoogleFonts.montserrat(color: Colors.black, fontSize: 20 , fontWeight: FontWeight.w600),),
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
                       onPressed: () {
-                        // Ajoutez ici la logique pour enregistrer l'utilisateur
                       },
-                      child: Text("CONTINUER", style: GoogleFonts.montserrat(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    minimumSize: const Size(361, 65),
+                  ),
+                      child: Text("CONTINUER", style: GoogleFonts.montserrat(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w700)),
                     ),
                   ],
                 ),
